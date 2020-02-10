@@ -18,7 +18,7 @@ const PartnerState =(props)=>{
 
     const LoadPartners=async()=>{
         state.loading=true;
-        const post = await axios.post("/masterAdmin/partner/all");
+        const post = await axios.post("https://repairkaki.com/masterAdmin/partner/all");
         dispatch({
             type:"LOAD_PARTNER",
             payload:post.data.data
@@ -27,7 +27,7 @@ const PartnerState =(props)=>{
 
     const LoadUsers = async()=>{
         state.loading=true;
-        const post = await axios.post("/masterAdmin/users/all");
+        const post = await axios.post("https://repairkaki.com/masterAdmin/users/all");
         dispatch({
             type:"LOAD_USER",
             payload:post.data.data
@@ -38,7 +38,7 @@ const PartnerState =(props)=>{
     const LoadAllRequest = async()=>{
         state.loading=true;
 
-        const post = await axios.post("/masterAdmin/requests/all");
+        const post = await axios.post("https://repairkaki.com/masterAdmin/requests/all");
         dispatch({
             type:"LOAD_REQUEST",
             payload:post.data.data
@@ -46,7 +46,7 @@ const PartnerState =(props)=>{
 
     }
     const changeActiveStatus=async(id,status)=>{
-         await axios.put("/masterAdmin/partner/activeStatus",{id,status});
+         await axios.put("https://repairkaki.com/masterAdmin/partner/activeStatus",{id,status});
         LoadPartners()
 
     }
