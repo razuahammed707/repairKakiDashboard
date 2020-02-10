@@ -1,0 +1,28 @@
+.DasboardGrid{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+}
+
+.MenuContainer{
+    background: #fafafa;
+    height: 100vh;
+}
+.dashboardMenu{
+    margin-top: 50px;
+    list-style-type: none;
+    padding: 0;
+    
+}
+.dashboardMenu li a{
+    font-size: 18x;
+    text-decoration: none;
+    display: block;
+    padding: 10px 30px;
+    color:#5d5d5d;    
+}
+.dashboardMenu li a:hover{
+    background:#ddd;
+}
+.dashboardContainer{
+    padding: 20px;
+}
