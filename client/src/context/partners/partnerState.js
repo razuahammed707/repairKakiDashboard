@@ -9,7 +9,8 @@ const PartnerState =(props)=>{
         loading:true,
         partners:[],
         users:[],
-        requests:[]
+        requests:[],
+        dashboard:{}
     }
     
     const [state, dispatch] = useReducer(PartnerReducer, initialState);
@@ -49,6 +50,18 @@ const PartnerState =(props)=>{
          await axios.put("https://repairkaki.com/masterAdmin/partner/activeStatus",{id,status});
         LoadPartners()
 
+    };
+
+
+    const LoadDashboard = async()=>{
+
+        const DashboardData= await axios.post("http://localhost:5000/masterAdmin/partner/matrix");
+        // console.log(DashboardData.data)
+        dispatch({
+            type:"LOAD_DASHBOARD",
+            payload:DashboardData.data
+        })
+
     }
 
     
@@ -61,7 +74,8 @@ const PartnerState =(props)=>{
             LoadPartners,
             LoadUsers,
             changeActiveStatus,
-            LoadAllRequest
+            LoadAllRequest,
+            LoadDashboard
          }
        }>
             {props.children}

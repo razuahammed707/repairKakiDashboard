@@ -8,9 +8,16 @@ import {Route} from "react-router-dom"
 import Users from "../pages/users/index"
 import Request from "../pages/requests/index";
 import RequestDetails from "../pages/requestDetails/index";
+import {Redirect} from "react-router-dom"
+
+const isLogin = localStorage.getItem("isMasterAuthenticated");
 
 
 function DashboardLayout(){
+
+    if(isLogin==="false"){
+        return(<Redirect to="/login"/>)
+    }
     return(<div className="DasboardGrid">
 
         <div className="MenuContainer">

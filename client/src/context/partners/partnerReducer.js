@@ -1,5 +1,6 @@
 
 function reducer(state,action){
+    
     switch(action.type){
        
         case "LOAD_PARTNER":
@@ -21,15 +22,21 @@ function reducer(state,action){
                     requests:action.payload,
                     loading:false
                 };
-        case "ACTIVE_STATUS":
-            return {
-                ...state,
-                partners:action.payload,
-                loading:false
-            };
-        default:
-            throw new Error();
-    }
+            case "LOAD_DASHBOARD":
+                return {
+                    ...state,
+                    dashboard:action.payload,
+                    loading:false
+                };
+            case "ACTIVE_STATUS":
+                return {
+                    ...state,
+                    partners:action.payload,
+                    loading:false
+                };
+            default:
+                throw new Error();
+        }
 
 }
 

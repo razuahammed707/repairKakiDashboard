@@ -43,9 +43,10 @@ export default function RecipeReviewCard() {
     const {requests,loading}=partnerContext.state;
     console.log(requests)
 
-    // eslint-disable-next-line
     useEffect(()=>{
         partnerContext.LoadAllRequest()
+        // eslint-disable-next-line
+
     },[])
 
 

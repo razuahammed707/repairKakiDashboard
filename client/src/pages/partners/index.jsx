@@ -26,9 +26,10 @@ function Partner(){
     const partnerContext = useContext(PartnerContext);
     const {partners,loading}=partnerContext.state;
     console.log(partners)
-    // eslint-disable-next-line
     useEffect(()=>{
         partnerContext.LoadPartners()
+            // eslint-disable-next-line
+
     },[])
     
 

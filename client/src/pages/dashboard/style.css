@@ -1,0 +1,24 @@
+.chartsArea{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    box-shadow: 0 0 5px #ddd;
+    padding: 40px;
+}
+
+.AnaylyticsArea div{
+    box-shadow: 0 0 5px #ddd;
+    padding: 20px;
+
+}
+.AnaylyticsArea h4{
+    margin: 0;
+    padding: 0;
+    color: #dc3545
+}
+.AnaylyticsArea {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
