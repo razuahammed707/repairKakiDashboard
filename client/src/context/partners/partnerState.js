@@ -55,7 +55,7 @@ const PartnerState =(props)=>{
 
     const LoadDashboard = async()=>{
 
-        const DashboardData= await axios.post("http://localhost:5000/masterAdmin/partner/matrix");
+        const DashboardData= await axios.post("https://repairkaki.com/masterAdmin/partner/matrix");
         // console.log(DashboardData.data)
         dispatch({
             type:"LOAD_DASHBOARD",
