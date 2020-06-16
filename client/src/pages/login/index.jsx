@@ -52,7 +52,7 @@ const login=(e)=>{
     let password =e.target.password.value;
     
 
-    if(email==="master@repairkaki.com" && password==="repairkaki123"){
+    if(email==="repairkaki@gmail.com" && password==="repairkaki123"){
         localStorage.setItem("isMasterAuthenticated",true)
     }else{
         localStorage.setItem("isMasterAuthenticated",false)

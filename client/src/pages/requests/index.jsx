@@ -13,6 +13,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
 import "./style.css"
 import moment from 'moment'
+import {Link} from "react-router-dom"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -69,8 +70,6 @@ export default function RecipeReviewCard() {
                 return(
                     <Card className={classes.root}>
                             <CardHeader
-                            
-                            
                                 title={item.problemType}
                                 subheader={moment(item.createdAt).format('MMMM Do YYYY, h:mm:ss a')}
                             />
@@ -81,13 +80,17 @@ export default function RecipeReviewCard() {
                             />
                             <CardContent>
                                 <Typography variant="body2" color="textSecondary" component="p">
-                                    Need vehicle servicing - authorised workshops preferred. 
+                                    {(item.description===""?"No description provided":item.description)}
                                 </Typography>
                             </CardContent>
                             <CardActions disableSpacing>
-                            
-                                <Button size="small" color="primary" align="right">
-                                    View More
+                          
+                                <Button size="small"  color="primary" >
+                                    <Link to={`/request/${item._id}`}>View More</Link>
+                                </Button>
+
+                                <Button  color="secondary" align="right" >
+                                  Delete
                                 </Button>
                             </CardActions>
                         

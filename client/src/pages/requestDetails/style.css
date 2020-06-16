@@ -2,3 +2,23 @@
     width: 800px;
     margin: 0 auto;    
 }
+.allRequest img{
+    width: 100%;
+}
+
+.quotationBox p{
+padding: 0;
+margin: 0;
+border-bottom: 1px solid #ddd;
+}
+
+.quotationBox{
+    box-shadow: 0 0 5px #ddd;
+    padding: 20px;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+}

@@ -34,6 +34,19 @@ function reducer(state,action){
                     partners:action.payload,
                     loading:false
                 };
+            case "LOAD_ALL_QUOTES":
+                return {
+                    ...state,
+                    allQuotes:action.payload,
+                    loading:false
+                };
+            
+            case "SET_LOADING":
+                return {
+                    ...state,
+                    loading:action.payload,
+                };
+                
             default:
                 throw new Error();
         }
