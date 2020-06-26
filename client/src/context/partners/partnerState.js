@@ -3,7 +3,7 @@ import PartnerContext from "./partnerContext";
 import PartnerReducer from "./partnerReducer";
 import axios from "axios"
 
-    const baseURL="http://repairkaki.com"
+    const baseURL="https://repairkaki.com"
 
     const PartnerState =(props)=>{
     const initialState = {
